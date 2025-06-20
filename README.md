@@ -22,8 +22,8 @@ This project is a backend service built with **C#**, **ASP.NET Core**, and **ML.
 
 1. Clone the repo
    ```bash
-      git clone https://github.com/iNoles/ResumeRanker.git
-      cd ResumeRanker
+   git clone https://github.com/iNoles/ResumeRanker.git
+   cd ResumeRanker
    ```
 2. Run locally
     ```bash
