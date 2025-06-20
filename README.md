@@ -33,4 +33,4 @@ This project is a backend service built with **C#**, **ASP.NET Core**, and **ML.
    ```bash
    docker build -t ResumeRanker .
    docker run -p 8080:80 ResumeRanker
-  ```
+   ```
