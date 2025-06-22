@@ -34,3 +34,7 @@ This project is a backend service built with **C#**, **ASP.NET Core**, and **ML.
    docker build -t resume-ranker .
    docker run -p 8080:80 resume-ranker
    ```
+
+4. Test the API
+
+Use Postman, cURL, or Swagger (if enabled) to test the /api/upload endpoint.
