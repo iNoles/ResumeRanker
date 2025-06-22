@@ -60,7 +60,16 @@ public class UploadController(AppDbContext db, ModelBuilder modelBuilder) : Cont
 
         if (job == null) return NotFound();
 
-        var ranked = job.Resumes.OrderByDescending(r => r.Score);
-        return Ok(ranked);
+        var result = job.Resumes
+            .OrderByDescending(r => r.Score)
+            .Select(r => new
+            {
+                r.Id,
+                r.Text,
+                Score = Math.Round(r.Score, 2), // 👈 Round to 2 decimals
+                r.JobRequestId
+            });
+
+        return Ok(result);
     }
 }
