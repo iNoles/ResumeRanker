@@ -1,5 +1,5 @@
 # -------- Build Stage --------
-FROM mcr.microsoft.com/dotnet/sdk:9.0.6 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.301 AS build
 WORKDIR /app
 
 # Copy everything in the root
