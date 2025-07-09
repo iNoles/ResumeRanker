@@ -1,5 +1,5 @@
 # -------- Build Stage --------
-FROM mcr.microsoft.com/dotnet/sdk:9.0.301 AS build
+FROM mcr.microsoft.com/dotnet/sdk:9.0.302 AS build
 WORKDIR /app
 
 # Copy everything in the root
@@ -10,7 +10,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # -------- Runtime Stage --------
-FROM mcr.microsoft.com/dotnet/aspnet:9.0.6
+FROM mcr.microsoft.com/dotnet/aspnet:9.0.7
 WORKDIR /app
 
 COPY --from=build /app/out .
